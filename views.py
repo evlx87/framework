@@ -7,6 +7,6 @@ def index_view(request):
 
 
 def about_view(request):
-    print(request)
-    return '200 OK', [b'About']
+    secret = request.get('secret_key', None)
+    return '200 OK',  render('about.html', secret=secret)
 
