@@ -1,14 +1,14 @@
 from base.core import CoreApp
-from urls import urls_pattern
+from urls import URLS
 
 
 def secret_controller(request):
     request['secret_key'] = 'SECRET'
 
 
-front = [
+FRONT = [
     secret_controller
 ]
 
 
-application = CoreApp(urls_pattern, front)
+application = CoreApp(URLS, FRONT)

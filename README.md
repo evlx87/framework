@@ -4,7 +4,11 @@
 ```cd /mnt/d/GitHub_repository/framework```
 
 ```uwsgi --http :8000 --wsgi-file run.py```
-
+***
+##### Ссылки для перехода на тестовый сайт на localhost
+* http://127.0.0.1:8000/
+* http://127.0.0.1:8000/about/
+* http://127.0.0.1:8000/contact/
 ***
 #### Директория BASE содержит файлы самого фреймворка
 ```  
