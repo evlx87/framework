@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Контакты</title>
-</head>
-<body>
-    <ul>
-        <li><a href="http://127.0.0.1:8000/">главная</a></li>
-        <li><a href="http://127.0.0.1:8000/about/">о нас</a></li>
-        <li><a href="http://127.0.0.1:8000/contact/">контакты</a></li>
-    </ul>
+{% extends "base.html" %}
+{% block index %}
     <hr>
     <h1 align="center">Отправить нам сообщение</h1>
     <form method="post" align="center">
@@ -18,5 +8,4 @@
         <input type="text" name="text" placeholder="Текст сообщения"><br>
 		<button type="submit">Отправить</button>
     </form>
-</body>
-</html>
+{% endblock %}
