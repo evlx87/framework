@@ -2,18 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <style type="text/css">{% block form_style %}{% endblock %}</style>
+    <link href="/static/styles.css" rel="stylesheet">
+<!--    <style type="text/static">{% block form_style %}{% endblock %}</style>-->
     <title>Site Name</title>
 </head>
 <body>
-    <div>
-        <h1>Заголовок 1</h1>
-        <h2>меню сайта</h2>
-        <ul>
-            <li><a href="http://127.0.0.1:8000/">главная</a></li>
-            <li><a href="http://127.0.0.1:8000/about/">о нас</a></li>
-            <li><a href="http://127.0.0.1:8000/contact/">контакты</a></li>
-        </ul>
+    <div class="header">
+        <h1>Название сайта</h1>
+        {% include './includes/main_menu.html' %}
+        <hr>
     </div>
     <div>
     {% block index %}
@@ -21,9 +18,9 @@
 
     {% block form %}
     {% endblock %}
-
     </div>
     <div>
+        <hr>
         <h2>footer</h2>
     </div>
 </body>

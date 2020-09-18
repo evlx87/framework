@@ -12,3 +12,6 @@ form textarea{
 form .redoutline{
     outline:1px solid red
 }
+body {
+    background-color: blueviolet;
+}
