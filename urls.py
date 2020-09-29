@@ -1,7 +1,7 @@
-from views import index_view, about_view, contact_view
+from views import main_view, create_course, create_category
 
 URLS = {
-    '/': index_view,
-    '/about/': about_view,
-    '/contact/': contact_view,
+    '/': main_view,
+    '/create-course/': create_course,
+    '/create-category/': create_category
 }
