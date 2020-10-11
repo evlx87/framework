@@ -2,3 +2,4 @@
 
 # Используемые директории
 TEMPLATES = 'templates'
+CSS = 'templates/static'

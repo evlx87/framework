@@ -58,3 +58,30 @@ class CoreApp:
         else:
             start_response('404 NOT FOUND', [('Content-Type', 'text/html')])
             return [b"Not Found"]
+
+    def add_route(self, url):
+        def inner(view):
+            self.urls[url] = view
+        return inner
+
+
+class DebugApp(CoreApp):
+    def __init__(self, urls, front_controllers):
+        self.application = CoreApp(urls, front_controllers)
+        super().__init__(urls, front_controllers)
+
+    def __call__(self, environ, start_response):
+        print('=================DEBUG MODE=================')
+        print(environ)
+        return self.application(environ, start_response)
+
+
+class MockApp(CoreApp):
+
+    def __init__(self, urls, front_controllers):
+        self.application = CoreApp(urls, front_controllers)
+        super().__init__(urls, front_controllers)
+
+    def __call__(self, environ, start_response):
+        start_response('200 OK', [('Content-Type', 'text/html')])
+        return [b'From Mock with Love']
