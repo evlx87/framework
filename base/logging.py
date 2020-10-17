@@ -18,5 +18,4 @@ def debug(func):
         end = time.time()
         print('DEBUG-->\t', func.__name__, end - start)
         return result
-
     return inner

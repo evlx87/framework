@@ -1,5 +1,5 @@
 from base.core import CoreApp
-from urls import URLS
+from setup.urls import URLS
 
 
 def secret_controller(request):
