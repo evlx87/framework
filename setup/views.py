@@ -1,5 +1,5 @@
 from base.logging import Logger, debug
-from base.models import TrainingSite
+from setup.models import TrainingSite
 from base.templator import render
 
 
@@ -24,10 +24,10 @@ def create_course(request):
             category = site.find_category_by_id(int(category_id))
             course = site.create_course('record', name, category)
             site.courses.append(course)
-        return '200 OK', render('create_course.html')
+        return '200 OK', render('page_example.html')
     else:
         categories = site.categories
-        return '200 OK', render('create_course.html', categories=categories)
+        return '200 OK', render('page_example.html', categories=categories)
 
 
 def create_category(request):

@@ -1,4 +1,4 @@
-from views import main_view, create_course, create_category
+from setup.views import main_view, create_course, create_category
 
 URLS = {
     '/': main_view,
