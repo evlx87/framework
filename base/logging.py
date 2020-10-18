@@ -1,6 +1,7 @@
-import time
+"""Функционал логирования событий"""
 
-from base.reusepatterns import SingletonByName
+import time
+from base.patterns import SingletonByName
 
 
 class Logger(metaclass=SingletonByName):
