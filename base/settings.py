@@ -2,4 +2,5 @@
 
 # Используемые директории
 TEMPLATES = 'templates'
-CSS = 'templates/static'
+DATABASE = 'db'
+
