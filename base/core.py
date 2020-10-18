@@ -1,3 +1,6 @@
+"""Основная функция фреймворка"""
+
+
 def parse_input_data(data: str):
     result = {}
     if data:
@@ -19,7 +22,8 @@ def parse_wsgi_input_data(data: bytes):
 def get_wsgi_input_data(environ):
     content_length_data = environ.get('CONTENT_LENGTH')
     content_length = int(content_length_data) if content_length_data else 0
-    data = environ['wsgi.input'].read(content_length) if content_length > 0 else b''
+    data = environ['wsgi.input'].read(
+        content_length) if content_length > 0 else b''
     return data
 
 
@@ -72,7 +76,6 @@ class DebugApp(CoreApp):
 
 
 class MockApp(CoreApp):
-
     def __init__(self, urls, front_controllers):
         self.application = CoreApp(urls, front_controllers)
         super().__init__(urls, front_controllers)
